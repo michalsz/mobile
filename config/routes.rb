@@ -1,5 +1,13 @@
 Mobile::Application.routes.draw do
+
   get "home/index"
+
+  resources :products do
+    collection do 
+      get 'index'
+      get 'show'
+   end
+  end
 
   root :to => "home#index"
   match "search" => "home#search"
