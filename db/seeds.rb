@@ -6,7 +6,13 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
 
+#Category.destroy_all
+#(1..5).each do |i|
+#  Category.create(:name => 'Name ' + i.to_s)
+#end
+
 Product.destroy_all
 (1..10).each do |i|
-  Product.create(:name => 'Name ' + i.to_s, :description => 'Description of the product ' + i.to_s)
+  product = Product.create(:name => 'Name ' + i.to_s, :description => 'Description of the product ' + i.to_s, :count => 20, :price => 200, :category => Category.find(1))
+  puts product.errors.inspect
 end

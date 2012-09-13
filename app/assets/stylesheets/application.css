@@ -5,3 +5,5 @@
  *= require_self
  *= require_tree . 
 */
+
+.category{width:100px;height:130px;text-align:center;border:1px solid red;float:left;margin:5px;}

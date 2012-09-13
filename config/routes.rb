@@ -8,6 +8,9 @@ Mobile::Application.routes.draw do
       get 'show'
    end
   end
+  match "products/:category_id" => "products#index"
+  
+
 
   root :to => "home#index"
   match "search" => "home#search"
