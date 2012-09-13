@@ -1,2 +1,13 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<% content_for :head do %>
+<h1><%= @product.name %></h1>
+<% end %>
+<br/>
+<div data-role="collapsible" data-content-theme="c">
+   <h3>Sprawdź dostępność</h3>
+   <p>W magazynie jest <%= @product.count %>szt</p>
+</div>
+
+<div data-role="collapsible" data-content-theme="c">
+   <h3>Opis</h3>
+   <p><%= @product.description %></p>
+</div>

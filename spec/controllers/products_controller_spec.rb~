@@ -1,0 +1,9 @@
+require 'spec_helper'
+
+describe ProductsController do
+  describe "GET index" do
+    get :index
+
+    assign(:products)
+  end
+end
