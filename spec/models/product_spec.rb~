@@ -1,0 +1,4 @@
+require File.dirname(__FILE__) + '/../../app/helper/spec_helper'
+
+describe Product do
+end
