@@ -15,4 +15,15 @@ describe HomeController, :type => :controller do
       should render_template(:index) 
     end
   end
+
+  describe "POST search" do
+    it 'assigns products' do
+      post :search, :keyword => 'product'
+
+      assigns(:products)
+      should respond_with(:success)
+      should render_template(:search) 
+    end
+  end
+
 end

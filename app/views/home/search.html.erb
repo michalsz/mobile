@@ -1,6 +1,8 @@
 <%= render :partial => 'search' %>
+<% if @products.present? %>
 <ul>
-<% @goods.each do |g| %>
-  <li><%= g %></li>
+<% @products.each do |product| %>
+  <li><%= render :partial => '/products/list_item', :locals => {:product => product} %></li>
 <% end %>
 </ul>
+<% end %>

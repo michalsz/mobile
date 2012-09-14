@@ -4,7 +4,9 @@ class HomeController < ApplicationController
   end
 
   def search
-    @goods = ['apple', 'salt', 'bananas', 'cake']
+    if params[:keyword].present?
+      @products = Product.search(params[:keyword])
+    end
   end
 
 end
